@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-cicd
+  namespace: nginx-cicd
+spec:
+  selector:
+    app: nginx-cicd
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
